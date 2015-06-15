@@ -1,0 +1,16 @@
+$primary-color : #CDFFDC;
+$secondary-color : #50F39F;
+$tertiary-color : #DA4747;
+$grey-color : #222; 
+$font-grey-color: #99998A;
+$mobile-size: 599px; 
+
+
+
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+
+@import "properties";
+@import "structure";
+@import "design";
+
+@import "media-queries";
