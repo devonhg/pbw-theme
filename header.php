@@ -49,3 +49,4 @@
 	<?php } ?>
 	
 	<div id="content" class="site-content">
+		<div class='content-row'>

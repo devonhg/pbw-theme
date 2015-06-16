@@ -1,4 +1,129 @@
 @charset "UTF-8";
+.p-clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.p-inline-center {
+  display: inline-block;
+  margin: 0 auto; }
+
+.p-def-padding, .p-att-button, .p-banner, .structure-header, #masthead {
+  padding: 20px; }
+
+.p-col-centered {
+  float: none;
+  margin: 0 auto; }
+
+.p-button-reset, .structure-header .menu-toggle, #masthead .menu-toggle {
+  border: none;
+  -webkit-appearance: none;
+  outline: none;
+  box-shadow: none;
+  text-shadow: none; }
+
+.p-def-pad-bottom {
+  margin-bottom: 25px; }
+
+.p-menu-highlight {
+  background-color: #9affb8;
+  border-radius: 3px; }
+
+.p-att-button {
+  background: #50F39F;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'Oswald';
+  font-weight: normal; }
+
+.p-banner {
+  background: #CDFFDC;
+  color: #00e745;
+  border-left: 6px solid #00e745;
+  border-radius: 4px; }
+
+.p-header-secondary, .p-header-primary {
+  font-family: color_basicregular;
+  text-transform: uppercase;
+  background-color: #222;
+  padding: 8px;
+  margin: 0;
+  font-size: 100%;
+  color: #99998A; }
+  .p-header-secondary h1, .p-header-primary h1, .p-header-secondary h2, .p-header-primary h2, .p-header-secondary h3, .p-header-primary h3, .p-header-secondary h4, .p-header-primary h4, .p-header-secondary h5, .p-header-primary h5, .p-header-secondary h6, .p-header-primary h6 {
+    margin: 0; }
+  .p-header-secondary a:hover, .p-header-primary a:hover {
+    text-decoration: none; }
+
+.p-header-primary {
+  color: #50F39F;
+  border-left: 6px solid #0b9f53;
+  text-align: center; }
+  .p-header-primary h1, .p-header-primary h2, .p-header-primary h3 {
+    border-bottom: 2px solid #DA4747;
+    text-align: center; }
+
+@media screen and (max-width: 599px) {
+  .p-mobile-reset {
+    width: 100%;
+    display: block;
+    float: none; } }
+.structure-header, #masthead {
+  /* Small Devices, Tablets */ }
+  .structure-header img, #masthead img {
+    height: 200px;
+    width: auto; }
+  .structure-header .site-branding, #masthead .site-branding {
+    display: inline-block;
+    max-width: 400px; }
+    .structure-header .site-branding aside, #masthead .site-branding aside {
+      margin: 0; }
+  .structure-header nav, #masthead nav {
+    float: right;
+    display: inline-block;
+    width: auto; }
+    .structure-header nav .current_page_item a, #masthead nav .current_page_item a {
+      border-bottom: 3px solid #CDFFDC; }
+    .structure-header nav li, #masthead nav li {
+      margin-right: 5px; }
+    .structure-header nav li:last-child, #masthead nav li:last-child {
+      margin-right: 0; }
+    .structure-header nav a, #masthead nav a {
+      padding: 15px; }
+  .structure-header .menu-toggle, #masthead .menu-toggle {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 150%;
+    width: 100%;
+    font-weight: bold; }
+  @media only screen and (max-width: 768px) {
+    .structure-header nav, #masthead nav,
+    .structure-header .site-branding,
+    #masthead .site-branding,
+    .structure-header .nav-menu li,
+    #masthead .nav-menu li {
+      width: 100%;
+      max-width: none;
+      text-align: center;
+      float: none;
+      margin: 0; }
+    .structure-header img, #masthead img {
+      width: 100%;
+      height: auto; } }
+
+.structure-content .content-row #primary, #content .content-row #primary {
+  background-color: yellow; }
+.structure-content .content-row #secondary, #content .content-row #secondary {
+  background-color: orange; }
+
+#masthead {
+  background-color: blue; }
+
+.sidebar-upper,
+.sidebar-lower {
+  background-color: green; }
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -1501,24 +1626,31 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, #page #masthead {
+.container, .structure-header, #masthead, .structure-content, #content, .sidebar-upper,
+.sidebar-lower {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, #page #masthead:before, .container:after, #page #masthead:after {
+  .container:before, .structure-header:before, #masthead:before, .structure-content:before, #content:before, .sidebar-upper:before,
+  .sidebar-lower:before, .container:after, .structure-header:after, #masthead:after, .structure-content:after, #content:after, .sidebar-upper:after,
+  .sidebar-lower:after {
     content: " ";
     display: table; }
-  .container:after, #page #masthead:after {
+  .container:after, .structure-header:after, #masthead:after, .structure-content:after, #content:after, .sidebar-upper:after,
+  .sidebar-lower:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container, #page #masthead {
+    .container, .structure-header, #masthead, .structure-content, #content, .sidebar-upper,
+    .sidebar-lower {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container, #page #masthead {
+    .container, .structure-header, #masthead, .structure-content, #content, .sidebar-upper,
+    .sidebar-lower {
       width: 970px; } }
   @media (min-width: 1200px) {
-    .container, #page #masthead {
+    .container, .structure-header, #masthead, .structure-content, #content, .sidebar-upper,
+    .sidebar-lower {
       width: 1170px; } }
 
 .container-fluid {
@@ -1532,16 +1664,16 @@ pre {
   .container-fluid:after {
     clear: both; }
 
-.row, #page #masthead .wrapper-line {
+.row, .structure-content .content-row, #content .content-row {
   margin-left: -15px;
   margin-right: -15px; }
-  .row:before, #page #masthead .wrapper-line:before, .row:after, #page #masthead .wrapper-line:after {
+  .row:before, .structure-content .content-row:before, #content .content-row:before, .row:after, .structure-content .content-row:after, #content .content-row:after {
     content: " ";
     display: table; }
-  .row:after, #page #masthead .wrapper-line:after {
+  .row:after, .structure-content .content-row:after, #content .content-row:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .structure-content .content-row #secondary, #content .content-row #secondary, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .structure-content .content-row #primary, #content .content-row #primary, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1704,7 +1836,7 @@ pre {
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .structure-content .content-row #secondary, #content .content-row #secondary, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .structure-content .content-row #primary, #content .content-row #primary, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
 
   .col-sm-1 {
@@ -1716,7 +1848,7 @@ pre {
   .col-sm-3 {
     width: 25%; }
 
-  .col-sm-4 {
+  .col-sm-4, .structure-content .content-row #secondary, #content .content-row #secondary {
     width: 33.33333%; }
 
   .col-sm-5 {
@@ -1728,7 +1860,7 @@ pre {
   .col-sm-7 {
     width: 58.33333%; }
 
-  .col-sm-8 {
+  .col-sm-8, .structure-content .content-row #primary, #content .content-row #primary {
     width: 66.66667%; }
 
   .col-sm-9 {
@@ -3640,17 +3772,29 @@ tbody.collapse.in {
     .navbar-fixed-bottom .navbar-collapse {
       max-height: 200px; } }
 
-.container > .navbar-header, #page #masthead > .navbar-header,
+.container > .navbar-header, .structure-header > .navbar-header, #masthead > .navbar-header, .structure-content > .navbar-header, #content > .navbar-header, .sidebar-upper > .navbar-header,
+.sidebar-lower > .navbar-header,
 .container > .navbar-collapse,
-#page #masthead > .navbar-collapse,
+.structure-header > .navbar-collapse,
+#masthead > .navbar-collapse,
+.structure-content > .navbar-collapse,
+#content > .navbar-collapse,
+.sidebar-upper > .navbar-collapse,
+.sidebar-lower > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
-    .container > .navbar-header, #page #masthead > .navbar-header,
+    .container > .navbar-header, .structure-header > .navbar-header, #masthead > .navbar-header, .structure-content > .navbar-header, #content > .navbar-header, .sidebar-upper > .navbar-header,
+    .sidebar-lower > .navbar-header,
     .container > .navbar-collapse,
-    #page #masthead > .navbar-collapse,
+    .structure-header > .navbar-collapse,
+    #masthead > .navbar-collapse,
+    .structure-content > .navbar-collapse,
+    #content > .navbar-collapse,
+    .sidebar-upper > .navbar-collapse,
+    .sidebar-lower > .navbar-collapse,
     .container-fluid > .navbar-header,
     .container-fluid > .navbar-collapse {
       margin-right: 0;
@@ -3694,7 +3838,8 @@ tbody.collapse.in {
   .navbar-brand > img {
     display: block; }
   @media (min-width: 768px) {
-    .navbar > .container .navbar-brand, #page .navbar > #masthead .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    .navbar > .container .navbar-brand, .navbar > .structure-header .navbar-brand, .navbar > #masthead .navbar-brand, .navbar > .structure-content .navbar-brand, .navbar > #content .navbar-brand, .navbar > .sidebar-upper .navbar-brand,
+    .navbar > .sidebar-lower .navbar-brand, .navbar > .container-fluid .navbar-brand {
       margin-left: -15px; } }
 
 .navbar-toggle {
@@ -4206,14 +4351,17 @@ a.badge:hover, a.badge:focus {
     font-weight: 200; }
   .jumbotron > hr {
     border-top-color: #d5d5d5; }
-  .container .jumbotron, #page #masthead .jumbotron, .container-fluid .jumbotron {
+  .container .jumbotron, .structure-header .jumbotron, #masthead .jumbotron, .structure-content .jumbotron, #content .jumbotron, .sidebar-upper .jumbotron,
+  .sidebar-lower .jumbotron, .container-fluid .jumbotron {
     border-radius: 6px; }
-  .jumbotron .container, .jumbotron #page #masthead, #page .jumbotron #masthead {
+  .jumbotron .container, .jumbotron .structure-header, .jumbotron #masthead, .jumbotron .structure-content, .jumbotron #content, .jumbotron .sidebar-upper,
+  .jumbotron .sidebar-lower {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     .jumbotron {
       padding: 48px 0; }
-      .container .jumbotron, #page #masthead .jumbotron, .container-fluid .jumbotron {
+      .container .jumbotron, .structure-header .jumbotron, #masthead .jumbotron, .structure-content .jumbotron, #content .jumbotron, .sidebar-upper .jumbotron,
+      .sidebar-lower .jumbotron, .container-fluid .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
       .jumbotron h1,
@@ -5421,10 +5569,10 @@ button.close {
 
   .carousel-indicators {
     bottom: 20px; } }
-.clearfix:before, .clearfix:after {
+.clearfix:before, .clearfix:after, .structure-header .wrapper-line:after, #masthead .wrapper-line:after {
   content: " ";
   display: table; }
-.clearfix:after {
+.clearfix:after, .structure-header .wrapper-line:after, #masthead .wrapper-line:after {
   clear: both; }
 
 .center-block {
@@ -5637,92 +5785,6 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-/*
-	This is the properties files, mostly for classes that have attributes 
-	for inheritence. 
-*/
-.p-clearfix:after, #page #masthead .wrapper-line:after {
-  content: "";
-  display: table;
-  clear: both; }
-
-.p-inline-center {
-  display: inline-block;
-  margin: 0 auto; }
-
-.p-def-padding, .p-att-button, .p-banner {
-  padding: 20px; }
-
-.p-col-centered {
-  float: none;
-  margin: 0 auto; }
-
-.p-button-reset {
-  border: none;
-  -webkit-appearance: none;
-  outline: none;
-  box-shadow: none;
-  text-shadow: none; }
-
-.p-def-pad-bottom {
-  margin-bottom: 25px; }
-
-.p-menu-highlight {
-  background-color: #9affb8;
-  border-radius: 3px; }
-
-.p-att-button {
-  background: #50F39F;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  border-radius: 8px;
-  font-family: 'Oswald';
-  font-weight: normal; }
-
-.p-banner {
-  background: #CDFFDC;
-  color: #00e745;
-  border-left: 6px solid #00e745;
-  border-radius: 4px; }
-
-.p-header-secondary, .p-header-primary {
-  font-family: color_basicregular;
-  text-transform: uppercase;
-  background-color: #222;
-  padding: 8px;
-  margin: 0;
-  font-size: 100%;
-  color: #99998A; }
-  .p-header-secondary h1, .p-header-primary h1, .p-header-secondary h2, .p-header-primary h2, .p-header-secondary h3, .p-header-primary h3, .p-header-secondary h4, .p-header-primary h4, .p-header-secondary h5, .p-header-primary h5, .p-header-secondary h6, .p-header-primary h6 {
-    margin: 0; }
-  .p-header-secondary a:hover, .p-header-primary a:hover {
-    text-decoration: none; }
-
-.p-header-primary {
-  color: #50F39F;
-  border-left: 6px solid #0b9f53;
-  text-align: center; }
-  .p-header-primary h1, .p-header-primary h2, .p-header-primary h3 {
-    border-bottom: 2px solid #DA4747;
-    text-align: center; }
-
-@media screen and (max-width: 599px) {
-  .p-mobile-reset {
-    width: 100%;
-    display: block;
-    float: none; } }
-#page #masthead .wrapper-line {
-  width: 100%; }
-#page #masthead .site-branding {
-  float: left; }
-#page #masthead #site-navigation {
-  float: right;
-  clear: none;
-  display: inline-block;
-  width: auto; }
-  #page #masthead #site-navigation ul {
-    display: inline-block; }
-
 /*==========  Non-Mobile First Method  ==========*/
 /* Large Devices, Wide Screens */
 /* Medium Devices, Desktops */

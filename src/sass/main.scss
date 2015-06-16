@@ -1,16 +1,28 @@
-$primary-color : #CDFFDC;
-$secondary-color : #50F39F;
-$tertiary-color : #DA4747;
-$grey-color : #222; 
-$font-grey-color: #99998A;
-$mobile-size: 599px; 
 
 
+@import "config";
 
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
+
 
 @import "properties";
-@import "structure";
 @import "design";
 
+
+
+#masthead{
+	@extend .structure-header;
+	background-color: blue; 
+}
+
+.sidebar-upper,
+.sidebar-lower{
+	@extend .container; 
+	background-color: green; 
+}
+
+#content{
+	@extend .structure-content;
+}
+
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 @import "media-queries";
