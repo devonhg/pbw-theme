@@ -1,28 +1,25 @@
-
-
 @import "config";
 
-
-
 @import "properties";
-@import "design";
-
-
 
 #masthead{
-	@extend .structure-header;
-	background-color: blue; 
+	@extend .structure-header; 
 }
 
 .sidebar-upper,
 .sidebar-lower{
 	@extend .container; 
-	background-color: green; 
+	@extend .structure-hor-widget;
 }
 
 #content{
 	@extend .structure-content;
 }
+
+#colophon{
+	@extend .structure-footer;
+}
+
 
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 @import "media-queries";

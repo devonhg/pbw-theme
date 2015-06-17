@@ -19,17 +19,14 @@
 	<?php } ?>
 	
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php /*
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', '_s' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', '_s' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php  printf( esc_html__( 'Theme: %1$s by %2$s.', '_s' ), '_s', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); */?>
+		<?php if ( is_active_sidebar( 'footer' ) ) { ?>
+			<div class="sidebar-footer" role="complementary">
+				<?php dynamic_sidebar( 'footer' ); ?>
+			</div><!-- #primary-sidebar -->
+		<?php } ?>
 
-			<?php if ( is_active_sidebar( 'footer' ) ) { ?>
-				<div class="sidebar-footer" role="complementary">
-					<?php dynamic_sidebar( 'footer' ); ?>
-				</div><!-- #primary-sidebar -->
-			<?php } ?>
+		<div class="site-info">
+			<sub>All website content &copy; <?php echo date('Y') . " " . get_bloginfo('name') ; ?> unless otherwise specified.</sub>
 				
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

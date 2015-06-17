@@ -8,7 +8,7 @@
   display: inline-block;
   margin: 0 auto; }
 
-.p-def-padding, .p-att-button, .p-banner, .structure-header, #masthead {
+.p-def-padding, .p-att-button, .p-banner {
   padding: 20px; }
 
 .p-col-centered {
@@ -72,21 +72,18 @@
 .structure-header, #masthead {
   /* Small Devices, Tablets */ }
   .structure-header img, #masthead img {
-    height: 200px;
-    width: auto; }
-  .structure-header .site-branding, #masthead .site-branding {
-    display: inline-block;
-    max-width: 400px; }
-    .structure-header .site-branding aside, #masthead .site-branding aside {
-      margin: 0; }
+    height: auto;
+    width: 100%; }
+  .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child {
+    margin: 0; }
   .structure-header nav, #masthead nav {
-    float: right;
-    display: inline-block;
-    width: auto; }
-    .structure-header nav .current_page_item a, #masthead nav .current_page_item a {
-      border-bottom: 3px solid #CDFFDC; }
+    display: inline;
+    text-align: center;
+    width: 100%; }
     .structure-header nav li, #masthead nav li {
-      margin-right: 5px; }
+      margin-right: 5px;
+      display: inline-block;
+      float: none; }
     .structure-header nav li:last-child, #masthead nav li:last-child {
       margin-right: 0; }
     .structure-header nav a, #masthead nav a {
@@ -112,17 +109,13 @@
       width: 100%;
       height: auto; } }
 
-.structure-content .content-row #primary, #content .content-row #primary {
-  background-color: yellow; }
-.structure-content .content-row #secondary, #content .content-row #secondary {
-  background-color: orange; }
-
-#masthead {
-  background-color: blue; }
-
-.sidebar-upper,
-.sidebar-lower {
-  background-color: green; }
+.structure-hor-widget aside:nth-child(1), .sidebar-upper aside:nth-child(1),
+.sidebar-lower aside:nth-child(1),
+.structure-hor-widget aside:nth-child(5),
+.sidebar-upper aside:nth-child(5),
+.sidebar-lower aside:nth-child(5) {
+  width: 100%;
+  clear: both; }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
@@ -1626,54 +1619,70 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, .structure-header, #masthead, .structure-content, #content, .sidebar-upper,
+.container, .structure-content, #content, .structure-footer, #colophon, .structure-hor-widget, .sidebar-upper,
 .sidebar-lower {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, .structure-header:before, #masthead:before, .structure-content:before, #content:before, .sidebar-upper:before,
-  .sidebar-lower:before, .container:after, .structure-header:after, #masthead:after, .structure-content:after, #content:after, .sidebar-upper:after,
+  .container:before, .structure-content:before, #content:before, .structure-footer:before, #colophon:before, .structure-hor-widget:before, .sidebar-upper:before,
+  .sidebar-lower:before, .container:after, .structure-content:after, #content:after, .structure-footer:after, #colophon:after, .structure-hor-widget:after, .sidebar-upper:after,
   .sidebar-lower:after {
     content: " ";
     display: table; }
-  .container:after, .structure-header:after, #masthead:after, .structure-content:after, #content:after, .sidebar-upper:after,
+  .container:after, .structure-content:after, #content:after, .structure-footer:after, #colophon:after, .structure-hor-widget:after, .sidebar-upper:after,
   .sidebar-lower:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container, .structure-header, #masthead, .structure-content, #content, .sidebar-upper,
+    .container, .structure-content, #content, .structure-footer, #colophon, .structure-hor-widget, .sidebar-upper,
     .sidebar-lower {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container, .structure-header, #masthead, .structure-content, #content, .sidebar-upper,
+    .container, .structure-content, #content, .structure-footer, #colophon, .structure-hor-widget, .sidebar-upper,
     .sidebar-lower {
       width: 970px; } }
   @media (min-width: 1200px) {
-    .container, .structure-header, #masthead, .structure-content, #content, .sidebar-upper,
+    .container, .structure-content, #content, .structure-footer, #colophon, .structure-hor-widget, .sidebar-upper,
     .sidebar-lower {
       width: 1170px; } }
 
-.container-fluid {
+.container-fluid, .structure-header, #masthead {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container-fluid:before, .container-fluid:after {
+  .container-fluid:before, .structure-header:before, #masthead:before, .container-fluid:after, .structure-header:after, #masthead:after {
     content: " ";
     display: table; }
-  .container-fluid:after {
+  .container-fluid:after, .structure-header:after, #masthead:after {
     clear: both; }
 
-.row, .structure-content .content-row, #content .content-row {
+.row, .structure-content .content-row, #content .content-row, .structure-footer .sidebar-footer, #colophon .sidebar-footer {
   margin-left: -15px;
   margin-right: -15px; }
-  .row:before, .structure-content .content-row:before, #content .content-row:before, .row:after, .structure-content .content-row:after, #content .content-row:after {
+  .row:before, .structure-content .content-row:before, #content .content-row:before, .structure-footer .sidebar-footer:before, #colophon .sidebar-footer:before, .row:after, .structure-content .content-row:after, #content .content-row:after, .structure-footer .sidebar-footer:after, #colophon .sidebar-footer:after {
     content: " ";
     display: table; }
-  .row:after, .structure-content .content-row:after, #content .content-row:after {
+  .row:after, .structure-content .content-row:after, #content .content-row:after, .structure-footer .sidebar-footer:after, #colophon .sidebar-footer:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .structure-content .content-row #secondary, #content .content-row #secondary, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .structure-content .content-row #primary, #content .content-row #primary, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child, .structure-content .content-row #secondary, #content .content-row #secondary, .structure-footer .sidebar-footer aside, #colophon .sidebar-footer aside, .structure-hor-widget aside:nth-child(2), .sidebar-upper aside:nth-child(2),
+.sidebar-lower aside:nth-child(2),
+.structure-hor-widget aside:nth-child(3),
+.sidebar-upper aside:nth-child(3),
+.sidebar-lower aside:nth-child(3),
+.structure-hor-widget aside:nth-child(4),
+.sidebar-upper aside:nth-child(4),
+.sidebar-lower aside:nth-child(4),
+.structure-hor-widget aside:nth-child(6),
+.sidebar-upper aside:nth-child(6),
+.sidebar-lower aside:nth-child(6),
+.structure-hor-widget aside:nth-child(7),
+.sidebar-upper aside:nth-child(7),
+.sidebar-lower aside:nth-child(7),
+.structure-hor-widget aside:nth-child(8),
+.sidebar-upper aside:nth-child(8),
+.sidebar-lower aside:nth-child(8), .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .structure-header .site-branding aside:nth-child(2), #masthead .site-branding aside:nth-child(2), .structure-content .content-row #primary, #content .content-row #primary, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1836,7 +1845,23 @@ pre {
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .structure-content .content-row #secondary, #content .content-row #secondary, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .structure-content .content-row #primary, #content .content-row #primary, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child, .structure-content .content-row #secondary, #content .content-row #secondary, .structure-footer .sidebar-footer aside, #colophon .sidebar-footer aside, .structure-hor-widget aside:nth-child(2), .sidebar-upper aside:nth-child(2),
+  .sidebar-lower aside:nth-child(2),
+  .structure-hor-widget aside:nth-child(3),
+  .sidebar-upper aside:nth-child(3),
+  .sidebar-lower aside:nth-child(3),
+  .structure-hor-widget aside:nth-child(4),
+  .sidebar-upper aside:nth-child(4),
+  .sidebar-lower aside:nth-child(4),
+  .structure-hor-widget aside:nth-child(6),
+  .sidebar-upper aside:nth-child(6),
+  .sidebar-lower aside:nth-child(6),
+  .structure-hor-widget aside:nth-child(7),
+  .sidebar-upper aside:nth-child(7),
+  .sidebar-lower aside:nth-child(7),
+  .structure-hor-widget aside:nth-child(8),
+  .sidebar-upper aside:nth-child(8),
+  .sidebar-lower aside:nth-child(8), .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .structure-header .site-branding aside:nth-child(2), #masthead .site-branding aside:nth-child(2), .structure-content .content-row #primary, #content .content-row #primary, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
 
   .col-sm-1 {
@@ -1848,7 +1873,23 @@ pre {
   .col-sm-3 {
     width: 25%; }
 
-  .col-sm-4, .structure-content .content-row #secondary, #content .content-row #secondary {
+  .col-sm-4, .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child, .structure-content .content-row #secondary, #content .content-row #secondary, .structure-footer .sidebar-footer aside, #colophon .sidebar-footer aside, .structure-hor-widget aside:nth-child(2), .sidebar-upper aside:nth-child(2),
+  .sidebar-lower aside:nth-child(2),
+  .structure-hor-widget aside:nth-child(3),
+  .sidebar-upper aside:nth-child(3),
+  .sidebar-lower aside:nth-child(3),
+  .structure-hor-widget aside:nth-child(4),
+  .sidebar-upper aside:nth-child(4),
+  .sidebar-lower aside:nth-child(4),
+  .structure-hor-widget aside:nth-child(6),
+  .sidebar-upper aside:nth-child(6),
+  .sidebar-lower aside:nth-child(6),
+  .structure-hor-widget aside:nth-child(7),
+  .sidebar-upper aside:nth-child(7),
+  .sidebar-lower aside:nth-child(7),
+  .structure-hor-widget aside:nth-child(8),
+  .sidebar-upper aside:nth-child(8),
+  .sidebar-lower aside:nth-child(8) {
     width: 33.33333%; }
 
   .col-sm-5 {
@@ -1860,7 +1901,7 @@ pre {
   .col-sm-7 {
     width: 58.33333%; }
 
-  .col-sm-8, .structure-content .content-row #primary, #content .content-row #primary {
+  .col-sm-8, .structure-header .site-branding aside:nth-child(2), #masthead .site-branding aside:nth-child(2), .structure-content .content-row #primary, #content .content-row #primary {
     width: 66.66667%; }
 
   .col-sm-9 {
@@ -3772,31 +3813,41 @@ tbody.collapse.in {
     .navbar-fixed-bottom .navbar-collapse {
       max-height: 200px; } }
 
-.container > .navbar-header, .structure-header > .navbar-header, #masthead > .navbar-header, .structure-content > .navbar-header, #content > .navbar-header, .sidebar-upper > .navbar-header,
+.container > .navbar-header, .structure-content > .navbar-header, #content > .navbar-header, .structure-footer > .navbar-header, #colophon > .navbar-header, .structure-hor-widget > .navbar-header, .sidebar-upper > .navbar-header,
 .sidebar-lower > .navbar-header,
 .container > .navbar-collapse,
-.structure-header > .navbar-collapse,
-#masthead > .navbar-collapse,
 .structure-content > .navbar-collapse,
 #content > .navbar-collapse,
+.structure-footer > .navbar-collapse,
+#colophon > .navbar-collapse,
+.structure-hor-widget > .navbar-collapse,
 .sidebar-upper > .navbar-collapse,
 .sidebar-lower > .navbar-collapse,
 .container-fluid > .navbar-header,
-.container-fluid > .navbar-collapse {
+.structure-header > .navbar-header,
+#masthead > .navbar-header,
+.container-fluid > .navbar-collapse,
+.structure-header > .navbar-collapse,
+#masthead > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
-    .container > .navbar-header, .structure-header > .navbar-header, #masthead > .navbar-header, .structure-content > .navbar-header, #content > .navbar-header, .sidebar-upper > .navbar-header,
+    .container > .navbar-header, .structure-content > .navbar-header, #content > .navbar-header, .structure-footer > .navbar-header, #colophon > .navbar-header, .structure-hor-widget > .navbar-header, .sidebar-upper > .navbar-header,
     .sidebar-lower > .navbar-header,
     .container > .navbar-collapse,
-    .structure-header > .navbar-collapse,
-    #masthead > .navbar-collapse,
     .structure-content > .navbar-collapse,
     #content > .navbar-collapse,
+    .structure-footer > .navbar-collapse,
+    #colophon > .navbar-collapse,
+    .structure-hor-widget > .navbar-collapse,
     .sidebar-upper > .navbar-collapse,
     .sidebar-lower > .navbar-collapse,
     .container-fluid > .navbar-header,
-    .container-fluid > .navbar-collapse {
+    .structure-header > .navbar-header,
+    #masthead > .navbar-header,
+    .container-fluid > .navbar-collapse,
+    .structure-header > .navbar-collapse,
+    #masthead > .navbar-collapse {
       margin-right: 0;
       margin-left: 0; } }
 
@@ -3838,8 +3889,8 @@ tbody.collapse.in {
   .navbar-brand > img {
     display: block; }
   @media (min-width: 768px) {
-    .navbar > .container .navbar-brand, .navbar > .structure-header .navbar-brand, .navbar > #masthead .navbar-brand, .navbar > .structure-content .navbar-brand, .navbar > #content .navbar-brand, .navbar > .sidebar-upper .navbar-brand,
-    .navbar > .sidebar-lower .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    .navbar > .container .navbar-brand, .navbar > .structure-content .navbar-brand, .navbar > #content .navbar-brand, .navbar > .structure-footer .navbar-brand, .navbar > #colophon .navbar-brand, .navbar > .structure-hor-widget .navbar-brand, .navbar > .sidebar-upper .navbar-brand,
+    .navbar > .sidebar-lower .navbar-brand, .navbar > .container-fluid .navbar-brand, .navbar > .structure-header .navbar-brand, .navbar > #masthead .navbar-brand {
       margin-left: -15px; } }
 
 .navbar-toggle {
@@ -4351,17 +4402,17 @@ a.badge:hover, a.badge:focus {
     font-weight: 200; }
   .jumbotron > hr {
     border-top-color: #d5d5d5; }
-  .container .jumbotron, .structure-header .jumbotron, #masthead .jumbotron, .structure-content .jumbotron, #content .jumbotron, .sidebar-upper .jumbotron,
-  .sidebar-lower .jumbotron, .container-fluid .jumbotron {
+  .container .jumbotron, .structure-content .jumbotron, #content .jumbotron, .structure-footer .jumbotron, #colophon .jumbotron, .structure-hor-widget .jumbotron, .sidebar-upper .jumbotron,
+  .sidebar-lower .jumbotron, .container-fluid .jumbotron, .structure-header .jumbotron, #masthead .jumbotron {
     border-radius: 6px; }
-  .jumbotron .container, .jumbotron .structure-header, .jumbotron #masthead, .jumbotron .structure-content, .jumbotron #content, .jumbotron .sidebar-upper,
+  .jumbotron .container, .jumbotron .structure-content, .jumbotron #content, .jumbotron .structure-footer, .jumbotron #colophon, .jumbotron .structure-hor-widget, .jumbotron .sidebar-upper,
   .jumbotron .sidebar-lower {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     .jumbotron {
       padding: 48px 0; }
-      .container .jumbotron, .structure-header .jumbotron, #masthead .jumbotron, .structure-content .jumbotron, #content .jumbotron, .sidebar-upper .jumbotron,
-      .sidebar-lower .jumbotron, .container-fluid .jumbotron {
+      .container .jumbotron, .structure-content .jumbotron, #content .jumbotron, .structure-footer .jumbotron, #colophon .jumbotron, .structure-hor-widget .jumbotron, .sidebar-upper .jumbotron,
+      .sidebar-lower .jumbotron, .container-fluid .jumbotron, .structure-header .jumbotron, #masthead .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
       .jumbotron h1,
