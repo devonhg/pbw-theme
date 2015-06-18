@@ -20,6 +20,9 @@
 	@extend .structure-footer;
 }
 
+.entry-title{
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
 
 @import "../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap.scss";
 @import "media-queries";
