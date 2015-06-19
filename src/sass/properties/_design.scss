@@ -21,12 +21,13 @@
 	}
 
 	.design-panel-tertiary{
-		
+		border-bottom: 3px double lighten( $secondary-color, 40% );
 	}
 
 //Buttons
 	.design-button-primary{
 
+		
 	}
 
 	.design-button-secondary{
@@ -36,4 +37,18 @@
 	.design-button-tertiary{
 		
 	}
+//Header Buttons
+	.design-header-button{
+		color: $secondary-color;
+		border-radius: 4px; 
+		border: none; 
+		transition: all 0.5s ease;
+	}.design-header-button:hover{
+		//border-bottom: 4px solid lighten( $tertiary-color, 25% ); 
+		text-decoration: none; 
+		color: $secondary-color;
+	}
 
+	.design-header-button-mobile{
+
+	}
