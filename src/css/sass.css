@@ -2,6 +2,21 @@
 body #page {
   font-family: "Trebuchet MS", Helvetica, sans-serif; }
 
+#masthead,
+#primary,
+#secondary,
+.sidebar-upper,
+.sidebar-lower {
+  margin-bottom: 20px; }
+
+#content a,
+#colophon a {
+  color: #FF6565;
+  transition: all 0.5s ease; }
+#content a:hover,
+#colophon a:hover {
+  color: #A3351C; }
+
 @font-face {
   font-family: '2_nelson_shocard_dnaregular';
   src: url("../src/fonts/2nelscd-webfont.eot");
@@ -30,12 +45,35 @@ body #page {
   float: none;
   margin: 0 auto; }
 
-.p-button-reset, .structure-header .menu-toggle, #masthead .menu-toggle {
+.p-button-reset, .structure-header .menu-toggle, #masthead .menu-toggle, .design-button-primary, #page .product .button,
+#page .product div.wc-proceed-to-checkout a.button,
+#page .woocommerce .button,
+#page .woocommerce div.wc-proceed-to-checkout a.button, .design-button-tertiary, #page .product .tabs li,
+#page .woocommerce .tabs li {
   border: none;
   -webkit-appearance: none;
   outline: none;
   box-shadow: none;
   text-shadow: none; }
+
+.p-woocommerce-reset div.product .woocommerce-tabs ul.tabs li:before, body #page div.product .woocommerce-tabs ul.tabs li:before,
+.p-woocommerce-reset div.product .woocommerce-tabs ul.tabs li:after,
+body #page div.product .woocommerce-tabs ul.tabs li:after {
+  border: 0 !important;
+  bottom: auto !important;
+  content: normal !important;
+  position: static; }
+@media only screen and (max-width: 480px) {
+  .p-woocommerce-reset .shop_table, body #page .shop_table {
+    display: none; }
+  .p-woocommerce-reset .order_details, body #page .order_details {
+    padding: 0; }
+  .p-woocommerce-reset .order_details li, body #page .order_details li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    border: 0; } }
 
 .p-def-pad-bottom {
   margin-bottom: 25px; }
@@ -90,6 +128,8 @@ body #page {
     width: 100%; }
   .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child {
     margin: 0; }
+  .structure-header .wrapper-line:after, #masthead .wrapper-line:after {
+    clear: both; }
   .structure-header nav, #masthead nav {
     display: inline;
     text-align: center;
@@ -126,6 +166,28 @@ body #page {
       width: 100%;
       height: auto; } }
 
+.structure-menu, .main-navigation {
+  margin-bottom: 15px; }
+
+.structure-base-padding, .structure-content .content-row #primary, #content .content-row #primary,
+.structure-content .content-row #container,
+#content .content-row #container, .design-panel-secondary, #content #primary .entry-content, #page .product .panel,
+#page .woocommerce .panel, .design-panel-tertiary aside, #colophon aside, .main-navigation aside {
+  padding: 25px !important; }
+  @media only screen and (max-width: 480px) {
+    .structure-base-padding, .structure-content .content-row #primary, #content .content-row #primary,
+    .structure-content .content-row #container,
+    #content .content-row #container, .design-panel-secondary, #content #primary .entry-content, #page .product .panel,
+    #page .woocommerce .panel, .design-panel-tertiary aside, #colophon aside, .main-navigation aside {
+      padding: 10px !important; } }
+
+.structure-content .content, #content .content {
+  max-width: 100%; }
+.structure-content .container #content, #content .container #content, .structure-content .structure-content #content, #content .structure-content #content, .structure-content #content #content, #content #content #content, .structure-content .structure-hor-widget #content, #content .structure-hor-widget #content, .structure-content .sidebar-upper #content, #content .sidebar-upper #content,
+.structure-content .sidebar-lower #content,
+#content .sidebar-lower #content {
+  width: 100%; }
+
 .structure-hor-widget aside:nth-child(1), .sidebar-upper aside:nth-child(1),
 .sidebar-lower aside:nth-child(1),
 .structure-hor-widget aside:nth-child(5),
@@ -134,18 +196,112 @@ body #page {
   width: 100%;
   clear: both; }
 
-.design-panel-tertiary, .main-navigation {
-  border-bottom: 3px double #eeac9d; }
+.design-header-primary, #page h1, .design-header-secondary, #page h2,
+#page h3,
+#page h4,
+#page h5,
+#page h6 {
+  font-family: '2_nelson_shocard_dnaregular';
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+  text-decoration: underline;
+  color: #A3351C;
+  line-height: 50px; }
+  .design-header-primary a, #page h1 a, .design-header-secondary a, #page h2 a,
+  #page h3 a,
+  #page h4 a,
+  #page h5 a,
+  #page h6 a {
+    color: #A3351C; }
+
+.design-header-secondary, #page h2,
+#page h3,
+#page h4,
+#page h5,
+#page h6 {
+  text-decoration: none; }
+
+.design-panel-primary, #primary,
+#container {
+  background-color: #ffffb3;
+  border-radius: 3px;
+  padding: 30px !important;
+  border: 1px solid #ffb2b2; }
+
+.design-panel-secondary, #content #primary .entry-content, #page .product .panel,
+#page .woocommerce .panel {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff; }
+
+.design-panel-tertiary, #colophon, .main-navigation {
+  border-bottom: 3px double #f6d1c8;
+  border-top: 3px double #f6d1c8;
+  background-color: rgba(255, 228, 228, 0.7); }
+
+/*.design-panel-woocommerce{
+	@extend .structure-base-padding;	
+	box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+}*/
+.design-button-primary, #masthead .menu-toggle, #page .product .button,
+#page .product div.wc-proceed-to-checkout a.button,
+#page .woocommerce .button,
+#page .woocommerce div.wc-proceed-to-checkout a.button {
+  background-color: #FF6565;
+  color: #FFFF66; }
+
+.design-button-tertiary, #page .product .tabs li,
+#page .woocommerce .tabs li {
+  background-color: #f6d1c8;
+  color: #FF6565;
+  border: 1px solid #A3351C; }
 
 .design-header-button, .menu a {
   color: #A3351C;
   border-radius: 4px;
   border: none;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  font-family: '2_nelson_shocard_dnaregular';
+  font-size: 150%;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.2); }
 
 .design-header-button:hover, .menu a:hover {
   text-decoration: none;
-  color: #A3351C; }
+  color: #db5030; }
+
+#masthead {
+  padding: 0 !important;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-position: center bottom; }
+  #masthead aside:nth-child(2) {
+    /*background-color: white; 
+    border-radius: 15px; 
+    padding: 15px; 
+    min-height: 100%;*/
+    font-weight: bold; }
+
+.wrapper-line {
+  padding: 15px; }
+
+.sidebar-upper,
+.sidebar-lower {
+  text-align: center; }
+
+#page .product .tabs:before,
+#page .woocommerce .tabs:before {
+  border: 1px solid #A3351C; }
+#page .product .star-rating,
+#page .woocommerce .star-rating {
+  margin: 0 auto; }
+#page .product .attachment-shop_catalog,
+#page .product .attachment-shop_single,
+#page .woocommerce .attachment-shop_catalog,
+#page .woocommerce .attachment-shop_single {
+  border: 1px solid #FF6565;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff; }
+#page li.product {
+  text-align: center; }
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
@@ -1649,42 +1805,42 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, .structure-content, #content, .structure-footer, #colophon, .structure-hor-widget, .sidebar-upper,
+.container, .structure-content, #content, .structure-hor-widget, .sidebar-upper,
 .sidebar-lower {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, .structure-content:before, #content:before, .structure-footer:before, #colophon:before, .structure-hor-widget:before, .sidebar-upper:before,
-  .sidebar-lower:before, .container:after, .structure-content:after, #content:after, .structure-footer:after, #colophon:after, .structure-hor-widget:after, .sidebar-upper:after,
+  .container:before, .structure-content:before, #content:before, .structure-hor-widget:before, .sidebar-upper:before,
+  .sidebar-lower:before, .container:after, .structure-content:after, #content:after, .structure-hor-widget:after, .sidebar-upper:after,
   .sidebar-lower:after {
     content: " ";
     display: table; }
-  .container:after, .structure-content:after, #content:after, .structure-footer:after, #colophon:after, .structure-hor-widget:after, .sidebar-upper:after,
+  .container:after, .structure-content:after, #content:after, .structure-hor-widget:after, .sidebar-upper:after,
   .sidebar-lower:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container, .structure-content, #content, .structure-footer, #colophon, .structure-hor-widget, .sidebar-upper,
+    .container, .structure-content, #content, .structure-hor-widget, .sidebar-upper,
     .sidebar-lower {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container, .structure-content, #content, .structure-footer, #colophon, .structure-hor-widget, .sidebar-upper,
+    .container, .structure-content, #content, .structure-hor-widget, .sidebar-upper,
     .sidebar-lower {
       width: 970px; } }
   @media (min-width: 1200px) {
-    .container, .structure-content, #content, .structure-footer, #colophon, .structure-hor-widget, .sidebar-upper,
+    .container, .structure-content, #content, .structure-hor-widget, .sidebar-upper,
     .sidebar-lower {
       width: 1170px; } }
 
-.container-fluid, .structure-header, #masthead {
+.container-fluid, .structure-header, #masthead, .structure-footer, #colophon {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container-fluid:before, .structure-header:before, #masthead:before, .container-fluid:after, .structure-header:after, #masthead:after {
+  .container-fluid:before, .structure-header:before, #masthead:before, .structure-footer:before, #colophon:before, .container-fluid:after, .structure-header:after, #masthead:after, .structure-footer:after, #colophon:after {
     content: " ";
     display: table; }
-  .container-fluid:after, .structure-header:after, #masthead:after {
+  .container-fluid:after, .structure-header:after, #masthead:after, .structure-footer:after, #colophon:after {
     clear: both; }
 
 .row, .structure-content .content-row, #content .content-row, .structure-footer .sidebar-footer, #colophon .sidebar-footer {
@@ -1696,7 +1852,9 @@ pre {
   .row:after, .structure-content .content-row:after, #content .content-row:after, .structure-footer .sidebar-footer:after, #colophon .sidebar-footer:after {
     clear: both; }
 
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child, .structure-content .content-row #secondary, #content .content-row #secondary, .structure-footer .sidebar-footer aside, #colophon .sidebar-footer aside, .structure-hor-widget aside:nth-child(2), .sidebar-upper aside:nth-child(2),
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .structure-content .content-row #secondary, #content .content-row #secondary, .structure-content .container #content li, #content .container #content li, .structure-content .structure-content #content li, #content .structure-content #content li, .structure-content #content #content li, #content #content #content li, .structure-content .structure-hor-widget #content li, #content .structure-hor-widget #content li, .structure-content .sidebar-upper #content li, #content .sidebar-upper #content li,
+.structure-content .sidebar-lower #content li,
+#content .sidebar-lower #content li, .structure-footer .sidebar-footer aside, #colophon .sidebar-footer aside, .structure-hor-widget aside:nth-child(2), .sidebar-upper aside:nth-child(2),
 .sidebar-lower aside:nth-child(2),
 .structure-hor-widget aside:nth-child(3),
 .sidebar-upper aside:nth-child(3),
@@ -1712,7 +1870,9 @@ pre {
 .sidebar-lower aside:nth-child(7),
 .structure-hor-widget aside:nth-child(8),
 .sidebar-upper aside:nth-child(8),
-.sidebar-lower aside:nth-child(8), .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .structure-header .site-branding aside:nth-child(2), #masthead .site-branding aside:nth-child(2), .structure-content .content-row #primary, #content .content-row #primary, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+.sidebar-lower aside:nth-child(8), .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .structure-content .content-row #primary, #content .content-row #primary,
+.structure-content .content-row #container,
+#content .content-row #container, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .structure-header .site-branding aside:nth-child(2), #masthead .site-branding aside:nth-child(2), .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
@@ -1875,7 +2035,9 @@ pre {
   margin-left: 100%; }
 
 @media (min-width: 768px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child, .structure-content .content-row #secondary, #content .content-row #secondary, .structure-footer .sidebar-footer aside, #colophon .sidebar-footer aside, .structure-hor-widget aside:nth-child(2), .sidebar-upper aside:nth-child(2),
+  .col-sm-1, .col-sm-2, .col-sm-3, .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child, .col-sm-4, .structure-content .content-row #secondary, #content .content-row #secondary, .structure-content .container #content li, #content .container #content li, .structure-content .structure-content #content li, #content .structure-content #content li, .structure-content #content #content li, #content #content #content li, .structure-content .structure-hor-widget #content li, #content .structure-hor-widget #content li, .structure-content .sidebar-upper #content li, #content .sidebar-upper #content li,
+  .structure-content .sidebar-lower #content li,
+  #content .sidebar-lower #content li, .structure-footer .sidebar-footer aside, #colophon .sidebar-footer aside, .structure-hor-widget aside:nth-child(2), .sidebar-upper aside:nth-child(2),
   .sidebar-lower aside:nth-child(2),
   .structure-hor-widget aside:nth-child(3),
   .sidebar-upper aside:nth-child(3),
@@ -1891,7 +2053,9 @@ pre {
   .sidebar-lower aside:nth-child(7),
   .structure-hor-widget aside:nth-child(8),
   .sidebar-upper aside:nth-child(8),
-  .sidebar-lower aside:nth-child(8), .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .structure-header .site-branding aside:nth-child(2), #masthead .site-branding aside:nth-child(2), .structure-content .content-row #primary, #content .content-row #primary, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .sidebar-lower aside:nth-child(8), .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .structure-content .content-row #primary, #content .content-row #primary,
+  .structure-content .content-row #container,
+  #content .content-row #container, .col-sm-9, .structure-header .site-branding aside:nth-child(2), #masthead .site-branding aside:nth-child(2), .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left; }
 
   .col-sm-1 {
@@ -1900,10 +2064,12 @@ pre {
   .col-sm-2 {
     width: 16.66667%; }
 
-  .col-sm-3 {
+  .col-sm-3, .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child {
     width: 25%; }
 
-  .col-sm-4, .structure-header .site-branding aside:first-child, #masthead .site-branding aside:first-child, .structure-content .content-row #secondary, #content .content-row #secondary, .structure-footer .sidebar-footer aside, #colophon .sidebar-footer aside, .structure-hor-widget aside:nth-child(2), .sidebar-upper aside:nth-child(2),
+  .col-sm-4, .structure-content .content-row #secondary, #content .content-row #secondary, .structure-content .container #content li, #content .container #content li, .structure-content .structure-content #content li, #content .structure-content #content li, .structure-content #content #content li, #content #content #content li, .structure-content .structure-hor-widget #content li, #content .structure-hor-widget #content li, .structure-content .sidebar-upper #content li, #content .sidebar-upper #content li,
+  .structure-content .sidebar-lower #content li,
+  #content .sidebar-lower #content li, .structure-footer .sidebar-footer aside, #colophon .sidebar-footer aside, .structure-hor-widget aside:nth-child(2), .sidebar-upper aside:nth-child(2),
   .sidebar-lower aside:nth-child(2),
   .structure-hor-widget aside:nth-child(3),
   .sidebar-upper aside:nth-child(3),
@@ -1931,10 +2097,12 @@ pre {
   .col-sm-7 {
     width: 58.33333%; }
 
-  .col-sm-8, .structure-header .site-branding aside:nth-child(2), #masthead .site-branding aside:nth-child(2), .structure-content .content-row #primary, #content .content-row #primary {
+  .col-sm-8, .structure-content .content-row #primary, #content .content-row #primary,
+  .structure-content .content-row #container,
+  #content .content-row #container {
     width: 66.66667%; }
 
-  .col-sm-9 {
+  .col-sm-9, .structure-header .site-branding aside:nth-child(2), #masthead .site-branding aside:nth-child(2) {
     width: 75%; }
 
   .col-sm-10 {
@@ -3843,41 +4011,45 @@ tbody.collapse.in {
     .navbar-fixed-bottom .navbar-collapse {
       max-height: 200px; } }
 
-.container > .navbar-header, .structure-content > .navbar-header, #content > .navbar-header, .structure-footer > .navbar-header, #colophon > .navbar-header, .structure-hor-widget > .navbar-header, .sidebar-upper > .navbar-header,
+.container > .navbar-header, .structure-content > .navbar-header, #content > .navbar-header, .structure-hor-widget > .navbar-header, .sidebar-upper > .navbar-header,
 .sidebar-lower > .navbar-header,
 .container > .navbar-collapse,
 .structure-content > .navbar-collapse,
 #content > .navbar-collapse,
-.structure-footer > .navbar-collapse,
-#colophon > .navbar-collapse,
 .structure-hor-widget > .navbar-collapse,
 .sidebar-upper > .navbar-collapse,
 .sidebar-lower > .navbar-collapse,
 .container-fluid > .navbar-header,
 .structure-header > .navbar-header,
 #masthead > .navbar-header,
+.structure-footer > .navbar-header,
+#colophon > .navbar-header,
 .container-fluid > .navbar-collapse,
 .structure-header > .navbar-collapse,
-#masthead > .navbar-collapse {
+#masthead > .navbar-collapse,
+.structure-footer > .navbar-collapse,
+#colophon > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
-    .container > .navbar-header, .structure-content > .navbar-header, #content > .navbar-header, .structure-footer > .navbar-header, #colophon > .navbar-header, .structure-hor-widget > .navbar-header, .sidebar-upper > .navbar-header,
+    .container > .navbar-header, .structure-content > .navbar-header, #content > .navbar-header, .structure-hor-widget > .navbar-header, .sidebar-upper > .navbar-header,
     .sidebar-lower > .navbar-header,
     .container > .navbar-collapse,
     .structure-content > .navbar-collapse,
     #content > .navbar-collapse,
-    .structure-footer > .navbar-collapse,
-    #colophon > .navbar-collapse,
     .structure-hor-widget > .navbar-collapse,
     .sidebar-upper > .navbar-collapse,
     .sidebar-lower > .navbar-collapse,
     .container-fluid > .navbar-header,
     .structure-header > .navbar-header,
     #masthead > .navbar-header,
+    .structure-footer > .navbar-header,
+    #colophon > .navbar-header,
     .container-fluid > .navbar-collapse,
     .structure-header > .navbar-collapse,
-    #masthead > .navbar-collapse {
+    #masthead > .navbar-collapse,
+    .structure-footer > .navbar-collapse,
+    #colophon > .navbar-collapse {
       margin-right: 0;
       margin-left: 0; } }
 
@@ -3919,8 +4091,8 @@ tbody.collapse.in {
   .navbar-brand > img {
     display: block; }
   @media (min-width: 768px) {
-    .navbar > .container .navbar-brand, .navbar > .structure-content .navbar-brand, .navbar > #content .navbar-brand, .navbar > .structure-footer .navbar-brand, .navbar > #colophon .navbar-brand, .navbar > .structure-hor-widget .navbar-brand, .navbar > .sidebar-upper .navbar-brand,
-    .navbar > .sidebar-lower .navbar-brand, .navbar > .container-fluid .navbar-brand, .navbar > .structure-header .navbar-brand, .navbar > #masthead .navbar-brand {
+    .navbar > .container .navbar-brand, .navbar > .structure-content .navbar-brand, .navbar > #content .navbar-brand, .navbar > .structure-hor-widget .navbar-brand, .navbar > .sidebar-upper .navbar-brand,
+    .navbar > .sidebar-lower .navbar-brand, .navbar > .container-fluid .navbar-brand, .navbar > .structure-header .navbar-brand, .navbar > #masthead .navbar-brand, .navbar > .structure-footer .navbar-brand, .navbar > #colophon .navbar-brand {
       margin-left: -15px; } }
 
 .navbar-toggle {
@@ -4432,17 +4604,17 @@ a.badge:hover, a.badge:focus {
     font-weight: 200; }
   .jumbotron > hr {
     border-top-color: #d5d5d5; }
-  .container .jumbotron, .structure-content .jumbotron, #content .jumbotron, .structure-footer .jumbotron, #colophon .jumbotron, .structure-hor-widget .jumbotron, .sidebar-upper .jumbotron,
-  .sidebar-lower .jumbotron, .container-fluid .jumbotron, .structure-header .jumbotron, #masthead .jumbotron {
+  .container .jumbotron, .structure-content .jumbotron, #content .jumbotron, .structure-hor-widget .jumbotron, .sidebar-upper .jumbotron,
+  .sidebar-lower .jumbotron, .container-fluid .jumbotron, .structure-header .jumbotron, #masthead .jumbotron, .structure-footer .jumbotron, #colophon .jumbotron {
     border-radius: 6px; }
-  .jumbotron .container, .jumbotron .structure-content, .jumbotron #content, .jumbotron .structure-footer, .jumbotron #colophon, .jumbotron .structure-hor-widget, .jumbotron .sidebar-upper,
+  .jumbotron .container, .jumbotron .structure-content, .jumbotron #content, .jumbotron .structure-hor-widget, .jumbotron .sidebar-upper,
   .jumbotron .sidebar-lower {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     .jumbotron {
       padding: 48px 0; }
-      .container .jumbotron, .structure-content .jumbotron, #content .jumbotron, .structure-footer .jumbotron, #colophon .jumbotron, .structure-hor-widget .jumbotron, .sidebar-upper .jumbotron,
-      .sidebar-lower .jumbotron, .container-fluid .jumbotron, .structure-header .jumbotron, #masthead .jumbotron {
+      .container .jumbotron, .structure-content .jumbotron, #content .jumbotron, .structure-hor-widget .jumbotron, .sidebar-upper .jumbotron,
+      .sidebar-lower .jumbotron, .container-fluid .jumbotron, .structure-header .jumbotron, #masthead .jumbotron, .structure-footer .jumbotron, #colophon .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
       .jumbotron h1,
@@ -5871,6 +6043,10 @@ button.close {
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 /* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  #page #content,
+  #page #colophon {
+    text-align: center; } }
 /* Custom, iPhone Retina */
 
 /*# sourceMappingURL=sass.css.map */

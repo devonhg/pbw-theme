@@ -13,15 +13,16 @@
 		//display: inline-block; 
 		//max-width: 400px; 
 		aside:first-child{
-			@extend .col-sm-4; 
+			@extend .col-sm-3; 
 			margin: 0; 
 		}aside:nth-child(2){
-			@extend .col-sm-8;
+			@extend .col-sm-9;
 		}
 	}
 
 	.wrapper-line:after{
 		@extend .clearfix; 
+		clear: both; 
 	}
 	//Navigation
 	nav{
@@ -75,21 +76,43 @@
     }
 }
 
+.structure-menu{
+	margin-bottom: 15px; 
+}
+
+.structure-base-padding{
+	padding: 25px !important; 
+	@media only screen and (max-width : 480px){
+		padding: 10px !important; 
+	}
+}
+
 .structure-content{
 	@extend .container; 
 	.content-row{
 		@extend .row;
-		#primary{
+		#primary,
+		#container{
 			@extend .col-sm-8;
+			@extend .structure-base-padding;
 		}
 		#secondary{
 			@extend .col-sm-4; 
 		}
 	}	
+	.content{
+		max-width: 100%;
+	}
+	.container #content{
+		width: 100%;
+		li{
+			@extend .col-sm-4;
+		}
+	}
 }
 
 .structure-footer{
-	@extend .container;
+	@extend .container-fluid;
 	.sidebar-footer{
 		@extend .row; 
 		aside{

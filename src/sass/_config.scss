@@ -7,8 +7,42 @@
 
 //Structure
 	$header-image-height : 200px; 
+	$default-down-margin : 20px; 
 	$mobile-size : 599px; 
 
 body #page{
+	@extend .p-woocommerce-reset;
 	font-family: "Trebuchet MS", Helvetica, sans-serif;
+
 }
+
+//Default Margin Bottom
+	#masthead,
+	#primary,
+	#secondary,
+	.sidebar-upper,
+	.sidebar-lower{
+		margin-bottom: $default-down-margin; 
+	}
+
+//Config Links
+	#content,
+	#colophon{
+		a{
+			color: $tertiary-color; 
+			transition: all 0.5s ease;
+		}a:hover{
+			color: $secondary-color; 
+		}
+	}
+
+//Config Headers
+	#page h1{
+		@extend .design-header-primary;
+	}#page h2,
+	#page h3,
+	#page h4,
+	#page h5,
+	#page h6{
+		@extend .design-header-secondary;
+	}

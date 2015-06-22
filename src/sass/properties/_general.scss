@@ -28,6 +28,31 @@
 	text-shadow: none; 
 }
 
+.p-woocommerce-reset{
+	div.product .woocommerce-tabs ul.tabs li:before,
+	div.product .woocommerce-tabs ul.tabs li:after{
+		border: 0 !important; 
+		bottom: auto !important; 
+		content: normal !important;
+		position: static; 
+	}
+	@media only screen and (max-width : 480px){
+		.shop_table{
+			display: none; 
+		}
+		.order_details{
+			padding: 0; 
+		}
+		.order_details li{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			text-align: center; 
+			border: 0; 
+		}
+	}
+}
+
 .p-def-pad-bottom{
 	margin-bottom: 25px; 	
 }
