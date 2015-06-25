@@ -45,7 +45,7 @@ body #page {
   float: none;
   margin: 0 auto; }
 
-.p-button-reset, .structure-header .menu-toggle, #masthead .menu-toggle, .design-button-primary, #page .product .button,
+.p-button-reset, .structure-header .menu-toggle, #masthead .menu-toggle, .design-button-primary, .p-woocommerce-reset .woocommerce-pagination .page-numbers .current, body #page .woocommerce-pagination .page-numbers .current, #page .product .button,
 #page .product div.wc-proceed-to-checkout a.button,
 #page .woocommerce .button,
 #page .woocommerce div.wc-proceed-to-checkout a.button, .design-button-tertiary, #page .product .tabs li,
@@ -63,6 +63,15 @@ body #page div.product .woocommerce-tabs ul.tabs li:after {
   bottom: auto !important;
   content: normal !important;
   position: static; }
+.p-woocommerce-reset .label, body #page .label {
+  color: #000; }
+.p-woocommerce-reset .woocommerce-pagination .page-numbers, body #page .woocommerce-pagination .page-numbers,
+.p-woocommerce-reset .woocommerce-pagination .page-numbers li,
+body #page .woocommerce-pagination .page-numbers li {
+  border: 0; }
+.p-woocommerce-reset .woocommerce-pagination a:hover, body #page .woocommerce-pagination a:hover {
+  background-color: #FF6565;
+  color: #FFFF66; }
 @media only screen and (max-width: 480px) {
   .p-woocommerce-reset .shop_table, body #page .shop_table {
     display: none; }
@@ -228,6 +237,13 @@ body #page div.product .woocommerce-tabs ul.tabs li:after {
   border-radius: 3px;
   padding: 30px !important;
   border: 1px solid #ffb2b2; }
+  .design-panel-primary .woocommerce-pagination, #primary .woocommerce-pagination,
+  #container .woocommerce-pagination {
+    font-size: 150%; }
+  .design-panel-primary .woocommerce-pagination li, #primary .woocommerce-pagination li,
+  #container .woocommerce-pagination li {
+    margin-right: 3px;
+    border-radius: 4px; }
 
 .design-panel-secondary, #content #primary .entry-content, #page .product .panel,
 #page .woocommerce .panel {
@@ -243,7 +259,7 @@ body #page div.product .woocommerce-tabs ul.tabs li:after {
 	@extend .structure-base-padding;	
 	box-shadow: 5px 5px 5px rgba(0,0,0,.2);
 }*/
-.design-button-primary, #masthead .menu-toggle, #page .product .button,
+.design-button-primary, .p-woocommerce-reset .woocommerce-pagination .page-numbers .current, body #page .woocommerce-pagination .page-numbers .current, #masthead .menu-toggle, #page .product .button,
 #page .product div.wc-proceed-to-checkout a.button,
 #page .woocommerce .button,
 #page .woocommerce div.wc-proceed-to-checkout a.button {

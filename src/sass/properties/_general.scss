@@ -29,13 +29,34 @@
 }
 
 .p-woocommerce-reset{
-	div.product .woocommerce-tabs ul.tabs li:before,
-	div.product .woocommerce-tabs ul.tabs li:after{
-		border: 0 !important; 
-		bottom: auto !important; 
-		content: normal !important;
-		position: static; 
-	}
+
+	//Reset Tab Design
+		div.product .woocommerce-tabs ul.tabs li:before,
+		div.product .woocommerce-tabs ul.tabs li:after{
+			border: 0 !important; 
+			bottom: auto !important; 
+			content: normal !important;
+			position: static; 
+		}
+	//Reset Label Design
+		.label{
+			color: #000; 
+		}
+	//Reset Pagenation Design
+		.woocommerce-pagination{
+			.page-numbers,
+			.page-numbers li{
+				border: 0; 
+			}
+			.page-numbers .current{
+				@extend .design-button-primary;
+			}
+			a:hover{
+				background-color: $tertiary-color; 
+				color: $primary-color;
+			}
+		}
+
 	@media only screen and (max-width : 480px){
 		.shop_table{
 			display: none; 
@@ -51,6 +72,9 @@
 			border: 0; 
 		}
 	}
+
+
+
 }
 
 .p-def-pad-bottom{
