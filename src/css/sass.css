@@ -181,6 +181,8 @@ body #page div.product .woocommerce-tabs ul.tabs li:after {
     #page .woocommerce .panel, .design-panel-tertiary aside, #colophon aside, .main-navigation aside {
       padding: 10px !important; } }
 
+.structure-content .entry-header, #content .entry-header {
+  text-align: center; }
 .structure-content .content, #content .content {
   max-width: 100%; }
 .structure-content .container #content, #content .container #content, .structure-content .structure-content #content, #content .structure-content #content, .structure-content #content #content, #content #content #content, .structure-content .structure-hor-widget #content, #content .structure-hor-widget #content, .structure-content .sidebar-upper #content, #content .sidebar-upper #content,

@@ -89,6 +89,9 @@
 
 .structure-content{
 	@extend .container; 
+	.entry-header{
+		text-align: center; 
+	}
 	.content-row{
 		@extend .row;
 		#primary,
