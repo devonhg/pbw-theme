@@ -45,7 +45,8 @@ body #page {
   float: none;
   margin: 0 auto; }
 
-.p-button-reset, .structure-header .menu-toggle, #masthead .menu-toggle, .design-button-primary, .p-woocommerce-reset .woocommerce-pagination .page-numbers .current, body #page .woocommerce-pagination .page-numbers .current, #page .product .button,
+.p-button-reset, .structure-header .menu-toggle, #masthead .menu-toggle, .design-button-primary, .p-woocommerce-reset .woocommerce-pagination .page-numbers .current, body #page .woocommerce-pagination .page-numbers .current, .design-panel-primary .page-description h1 a, #primary .page-description h1 a,
+#container .page-description h1 a, #page .product .button,
 #page .product div.wc-proceed-to-checkout a.button,
 #page .woocommerce .button,
 #page .woocommerce div.wc-proceed-to-checkout a.button, .design-button-tertiary, #page .product .tabs li,
@@ -244,6 +245,22 @@ body #page .woocommerce-pagination .page-numbers li {
   #container .woocommerce-pagination li {
     margin-right: 3px;
     border-radius: 4px; }
+  .design-panel-primary .page-description, #primary .page-description,
+  #container .page-description {
+    text-align: center; }
+    .design-panel-primary .page-description h1 a, #primary .page-description h1 a,
+    #container .page-description h1 a {
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block; }
+    .design-panel-primary .page-description h1 a:hover, #primary .page-description h1 a:hover,
+    #container .page-description h1 a:hover {
+      text-decoration: none; }
+    .design-panel-primary .page-description h1, #primary .page-description h1,
+    #container .page-description h1 {
+      text-decoration: none;
+      display: block;
+      margin-bottom: 20px; }
 
 .design-panel-secondary, #content #primary .entry-content, #page .product .panel,
 #page .woocommerce .panel {
@@ -259,7 +276,8 @@ body #page .woocommerce-pagination .page-numbers li {
 	@extend .structure-base-padding;	
 	box-shadow: 5px 5px 5px rgba(0,0,0,.2);
 }*/
-.design-button-primary, .p-woocommerce-reset .woocommerce-pagination .page-numbers .current, body #page .woocommerce-pagination .page-numbers .current, #masthead .menu-toggle, #page .product .button,
+.design-button-primary, .p-woocommerce-reset .woocommerce-pagination .page-numbers .current, body #page .woocommerce-pagination .page-numbers .current, .design-panel-primary .page-description h1 a, #primary .page-description h1 a,
+#container .page-description h1 a, #masthead .menu-toggle, #page .product .button,
 #page .product div.wc-proceed-to-checkout a.button,
 #page .woocommerce .button,
 #page .woocommerce div.wc-proceed-to-checkout a.button {

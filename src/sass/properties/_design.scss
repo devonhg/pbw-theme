@@ -32,6 +32,23 @@
 			margin-right: 3px; 
 			border-radius: 4px; 
 		}
+		.page-description{
+			text-align: center; 
+			h1 a{
+				@extend .design-button-primary;
+				padding: 10px; 
+				border-radius: 8px; 
+				display: inline-block; 
+			}h1 a:hover{
+				text-decoration: none; 
+			}
+
+			h1{
+				text-decoration: none; 
+				display: block; 
+				margin-bottom: 20px; 
+			}
+		}
 
 	}
 
